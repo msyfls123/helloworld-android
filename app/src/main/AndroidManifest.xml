@@ -5,8 +5,8 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_kimi"
-        android:logo="@mipmap/ic_cat"
         android:label="@string/app_name"
+        android:logo="@mipmap/ic_cat"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -17,9 +17,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DisplayMessageActivity"
-            android:parentActivityName=".MainActivity" >
+        <activity
+            android:name=".DisplayMessageActivity"
+            android:parentActivityName=".MainActivity">
+
             <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".NewsArticlesActivity"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
