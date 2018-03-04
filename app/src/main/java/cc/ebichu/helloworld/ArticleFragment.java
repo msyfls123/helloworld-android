@@ -3,6 +3,7 @@ package cc.ebichu.helloworld;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,12 +33,14 @@ public class ArticleFragment extends Fragment {
         View v = inflater.inflate(R.layout.article_view, container, false);
         View tv = v.findViewById(R.id.test_string);
         ((TextView)tv).setText(message);
+        Log.d("HelloWorldActivity", "onCreate execute");
         return v;
     }
 
     public void updateArticleView(String message) {
         View textView = getView().findViewById(R.id.test_string);
         ((TextView)textView).setText(message);
+        Log.d("HelloWorldActivity", "onUpdate execute");
     }
 
 }
